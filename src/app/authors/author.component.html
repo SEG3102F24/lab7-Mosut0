@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="authorId">Enter Author ID:</label>
+    <input
+      type="number"
+      id="authorId"
+      [(ngModel)]="authorId"
+      name="authorId"
+      required
+    />
+    <button type="submit">Search</button>
+  </form>
+  
+  <div *ngIf="author">
+    <h2>Author Information</h2>
+    <p><strong>First Name:</strong> {{ author.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ author.lastName }}</p>
+    <!-- Add more fields as needed -->
+  </div>
+  
+  <div *ngIf="message" class="message">
+    {{ message }}
+  </div>
+  
